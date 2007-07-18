@@ -1,0 +1,15 @@
+#summary These are the Coding Standards for gelato CMS.
+#labels Phase-Implementation
+
+= Coding Standards =
+
+  * Use tabs instead of spaces for indentation.
+  * for functions and classes, the opening brace { should be on the same line.
+  * conditionals have the opening brace on the same line: if ( foo == bar ) {
+  * on an else condition, closing brace on the same line, else and opening brace on same line: } else {
+  * Methods are named like so: methodName
+  * Variables are named like so: variableName
+  * Classes files are named like so: name.class.php
+  * spaces inside parentheses and operators: ( parentheses ), foo == bar
+  * space before assignment, space after: $foo = bar
+

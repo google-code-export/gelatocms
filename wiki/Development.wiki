@@ -1,4 +1,4 @@
-#summary Instructions to access the Gelato's SVN repository on Google Code using [http://tortoisesvn.sourceforge.net/ TortoiseSVN]:
+#summary Instructions to access the Gelato's SVN repository on Google Code using TortoiseSVN
 #labels Phase-Implementation,Featured,Phase-Deploy
 
 = Development Version =
@@ -30,5 +30,4 @@ If you want to access the source code on read mode, you can access to the SVN th
 == Web-based interface ==
 
 If you only want to view into the current status of Gelato's code you can browse the SVN tree using the [http://gelatocms.googlecode.com/svn/ SVN web-based interface].
-
 

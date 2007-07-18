@@ -1,5 +1,5 @@
 #summary These are the Coding Standards for gelato CMS.
-#labels Phase-Implementation
+#labels Phase-Implementation,Featured
 
 = Coding Standards =
 
@@ -12,4 +12,3 @@
   * Classes files are named like so: name.class.php
   * spaces inside parentheses and operators: ( parentheses ), foo == bar
   * space before assignment, space after: $foo = bar
-

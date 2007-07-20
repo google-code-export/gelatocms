@@ -3,6 +3,7 @@
 
 = Coding Standards =
 
+  * Code (function and variable names), comments and files on English.
   * Use tabs instead of spaces for indentation.
   * for functions and classes, the opening brace { should be on the same line.
   * conditionals have the opening brace on the same line: if ( foo == bar ) {

@@ -4,6 +4,7 @@
 = Coding Standards =
 
   * Code (function and variable names), comments and files on English.
+  * Do not use PHP short tags, use _<?php_ instead of _<?_ (this affects _<?=_ use _<?php echo_)
   * Use tabs instead of spaces for indentation.
   * for functions and classes, the opening brace { should be on the same line.
   * conditionals have the opening brace on the same line: if ( foo == bar ) {

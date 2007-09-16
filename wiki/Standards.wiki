@@ -14,3 +14,6 @@
   * Classes files are named like so: name.class.php
   * spaces inside parentheses and operators: ( parentheses ), foo == bar
   * space before assignment, space after: $foo = bar
+  * Please review this page regarding security: [[Security]]
+ 
+ 

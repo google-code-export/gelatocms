@@ -1,4 +1,5 @@
 #summary Security
+#labels Featured,Phase-Implementation
 
 = Introduction =
 
@@ -14,6 +15,7 @@ Gelato development team and community does its best to be address security matte
     * If HTTP REQUEST variables are going to end up in a SQL query, please add functions to validate the string to the best of your ability.
     * Please require_once('entry.php') and use the $db, $user, $tumble as globals on pages you code
     * There is a forthcoming sanitizing XSS function.  Please use it around all HTTP REQUESTS
+ 
  
  
  

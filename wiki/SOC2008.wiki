@@ -1,0 +1,83 @@
+#Ideas for Google Summer of Code 2008.
+
+= About Your Organization  =
+
+== What is your Organization's Name? ==
+
+gelato cms
+
+== What is your Organization's Homepage?  ==
+
+http://www.gelatocms.com/
+
+== Describe your organization.  ==
+
+gelato is the lead opensource tumblelog CMS and is built on AJAX, PHP and MySQL.
+
+The post formats found on gelato include photos, video, audio, links, quotes and dialogues.
+
+== Why is your organization applying to participate in GSoC 2008? What do you hope to gain by participating?  ==
+
+Our aim in applying is to nurture long term open source participation with gelato and the global opensource community, and to obtain useful contributions to the project.
+
+We hope to improve on our successes by attracting new talented developers to our project.
+
+== Did your organization participate in previous GSoC years? If so, please summarize your involvement and the successes and failures of your student projects. (optional) ==
+
+No
+
+== If your organization has not previously participated in GSoC, have you applied in the past? If so, for what year(s)? (optional) ==
+
+No, this is our first application.
+
+== What license does your project use? ==
+
+GNU General Public License v2
+
+== URL for your ideas page ==
+
+http://dev.gelatocms.com/soc/
+
+== What is the main development mailing list for your organization? ==
+
+http://groups.google.com/group/gelatocms
+
+== Where is the main IRC channel for your organization? ==
+
+coming soon
+
+== Does your organization have an application template you would like to see students use? If so, please provide it now. (optional) ==
+
+Not yet. we are currently working on a set of gelato specific SoC student application guidelines that will be published in in the gelato SoC ideas page before the start of the SoC student application period.
+
+== Who will be your backup organization administrator? Please enter their Google Account address. We will email them to confirm, your organization will not become active until they respond. (optional) ==
+
+Pablo Mariano Silva - pmsilva87@gmail.com
+
+= About Your Mentors =
+
+== What criteria did you use to select these individuals as mentors? Please be as specific as possible. ==
+
+We will use the gelato developes as mentors.
+
+We have asked core gelato committers whether they are interested to mentor students in an open call to the developers mailing list.
+
+Our aim is to use them because they have the best development practices on the project and have been through the gelato process already and know the way around the project.
+
+== Who will your mentors be? Please enter their Google Account address separated by commas. If your organization is accepted we will email each mentor to invite them to take part. (optional) ==
+
+Pedro Santana - pecesama@gmail.com
+Pablo Mariano Silva - pmsilva87@gmail.com
+Jorge Condomí - ravenlp@gmail.com
+Victor Bracco - vbracco@gmail.com
+Victor De la Rocha - vyk2rr@gmail.com
+
+= About The Program  =
+
+== What is your plan for dealing with disappearing students?  ==
+
+== What is your plan for dealing with disappearing mentors?  ==
+
+== What steps will you take to encourage students to interact with your project's community before, during and after the program?  ==
+
+== What will you do to ensure that your accepted students stick with the project after GSoC concludes?  ==

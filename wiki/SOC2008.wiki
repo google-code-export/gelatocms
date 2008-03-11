@@ -44,7 +44,7 @@ http://groups.google.com/group/gelatocms
 
 == Where is the main IRC channel for your organization? ==
 
-coming soon
+irc://irc.freenode.net/#GelatoCMS
 
 == Does your organization have an application template you would like to see students use? If so, please provide it now. (optional) ==
 

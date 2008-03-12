@@ -78,6 +78,8 @@ Victor De la Rocha - vyk2rr@gmail.com
 
 == What is your plan for dealing with disappearing mentors?  ==
 
+Our contigency plan is quite simple, we have a few close friends (freelancers, coders, etc) who have made sporadic contributions to the project, as backup mentors.We already asked them if they could act as a backup in different areas, in case any of the original mentors can't make it in time or decide to step down.
+
 == What steps will you take to encourage students to interact with your project's community before, during and after the program?  ==
 
 == What will you do to ensure that your accepted students stick with the project after GSoC concludes?  ==

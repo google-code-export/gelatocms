@@ -76,6 +76,16 @@ Victor De la Rocha - vyk2rr@gmail.com
 
 == What is your plan for dealing with disappearing students?  ==
 
+We hope to minimize the damage done by a missing student following the next steps: 
+
+* Requiring continuos code updates.
+* requiring students to keep in touch.
+* The mentors will have the responsibility for their students, keeping track of what their students are up to.
+* Ask our students to provide means for us to get in touch beyond email, where possible - phone, etc - in case we need to get in touch urgently.
+* The student should have a clear way to indicate they are feeling lost or feel stuck, so that the mentor can help.
+* Provide plenty of help and encouragement to continue where required.
+* If a student actually decides to leave, the project will be taken on by somebody from the gelato team in the future.
+
 == What is your plan for dealing with disappearing mentors?  ==
 
 Our contigency plan is quite simple, we have a few close friends (freelancers, coders, etc) who have made sporadic contributions to the project, as backup mentors.We already asked them if they could act as a backup in different areas, in case any of the original mentors can't make it in time or decide to step down.

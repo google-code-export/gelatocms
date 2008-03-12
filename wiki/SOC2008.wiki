@@ -94,4 +94,4 @@ Our contigency plan is quite simple, we have a few close friends (freelancers, c
 
 == What will you do to ensure that your accepted students stick with the project after GSoC concludes?  ==
 
-In addition to a constant interpersonal conversation, we will show them a few closed source alternatives similar to our project, and ask them if they can find features that we don't have (to fork out), technical and logical problems that we haven't solved yet, and community flaws that we haven't faced before.If we can show them a few good things about open source, their curiosity will do the rest.
+In addition to a constant interpersonal conversation, we will show them a few closed source alternatives similar to our project, and ask them if they can find features that we don't have (to fork out), technical and logical problems that we haven't solved yet, and community flaws that we haven't faced before.If we can show them a few good things about open source idea, their curiosity will do the rest.

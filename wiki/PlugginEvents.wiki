@@ -1,5 +1,6 @@
-#summary Primera lista de posible eventos de motor de plugins
 #labels Phase-Requirements
+= Events =
+#summary Primera lista de posible eventos de motor de plugins
 
 == Instalacion ==
 
@@ -27,15 +28,20 @@
     * *user_edited*:
     * *user_deleted*:
     * *user_authenticate*:
+    * *user_authenticate_fail*:
     * *user_login*:
     * *user_logout*:
     * *theme_switch*:
     * *plugin_activate*:
     * *plugin_deactivate*:
     * *plugins_loaded*:
+
 == Parte Publica ==
-    * *gelato_head*:
-    * *gelato_footer*:
+    * *gelato_head*: se ejecuta antes de que comienze el `html`.
+    * *gelato_footer*: se ejecuta despues de que terminó el `html`.
+    * *gelato_notready*: se ejecuta cuando no se tiene conexion con la DB.
+    * *gelato_noposts*: se ejecuta cuando no hay posts para mostrar.
+    * *gelato_404*: se ejecuta cuando se detecta un error 404.
 
 == Posts ==
     * *post_created*:
@@ -48,6 +54,9 @@
     * *comment_deleted*:
     * *comment_spam*:
 
-== Templates ==
-    * *get_footer*:
-    * *get_header*:
+== Themes ==
+    * *theme_preload*: se ejecuta antes de empezar a cargar un theme.
+    * *theme_loaded*: se ejecuta cuando termino de cargar un theme.
+    * *theme_parsed*: se ejecuta cuando termino de procesar los bloques y variables.
+    * *theme_ready*: se ejecuta cuando el theme esta listo y se lo puede imprimir.
+    * *theme_printed*: se ejecuta cuando termino de imprimirlo.

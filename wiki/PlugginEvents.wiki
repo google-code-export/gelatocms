@@ -26,9 +26,13 @@
     * *user_created*: 
     * *user_edited*:
     * *user_deleted*:
+    * *user_authenticate*:
     * *user_login*:
     * *user_logout*:
-
+    * *theme_switch*:
+    * *plugin_activate*:
+    * *plugin_deactivate*:
+    * *plugins_loaded*:
 == Parte Publica ==
     * *gelato_head*:
     * *gelato_footer*:
@@ -45,4 +49,5 @@
     * *comment_spam*:
 
 == Templates ==
-    * *theme_switch*:
+    * *get_footer*:
+    * *get_header*:

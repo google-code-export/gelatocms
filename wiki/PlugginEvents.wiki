@@ -1,0 +1,45 @@
+#summary Primera lista de posible eventos de motor de plugins
+#labels Phase-Requirements
+
+= Instalacion =
+
+    * *install_begins*:  se ejecuta cuando la instalacion ha comenzado
+    * *install_success*: se ejecuta cuando la instalacion fue exitosa
+    * *install_fail*: se ejecuta cuando la instalacion falló
+    * *install_ends*: se ejecuta cuando la instalacion termino, bien o mal
+
+= Actualizacion =
+
+    * *update_detected*: se ejecuta cuando se detecta una nueva version disponible
+    * *update_begins*:
+    * *update_ends*:
+    * *update_success*:
+    * *update_fail*:
+
+= Panel de Control =
+    * *admin_head*: Runs in the HTML `head` section of the admin panel. 
+    * *admin_footer*: Runs at the end of the admin panel inside the body tag.
+    * *setting_success*:
+    * *setting_fail*:
+    * *option_success*:
+    * *option_fail*:
+    * *user_created*: 
+    * *user_edited*:
+    * *user_deleted*:
+    * *user_login*:
+    * *user_logout*:
+
+= Parte Publica = 
+    * *gelato_head*:
+    * *gelato_footer*:
+
+= Posts =
+    * *post_created*:
+    * *post_updated*:
+    * *post_deleted*:
+
+= Comentarios =
+    * *comment_created*:
+    * *comment_edited*:
+    * *comment_deleted*:
+    * *comment_spam*:

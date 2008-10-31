@@ -2,6 +2,9 @@
 #labels Phase-Requirements
 = Events =
 
+== General ==
+    * *gelato_init*: se ejecuta antes de todo.
+
 == Instalacion ==
 
     * *install_begins*:  se ejecuta cuando la instalacion ha comenzado
@@ -35,6 +38,8 @@
     * *plugin_activate*:
     * *plugin_deactivate*:
     * *plugins_loaded*:
+    * *add_options_panel*: se ejecuta antes de finalizar el fieldset de opctions.
+    * *add_settings_panel*: se ejecuta antes de finalizar el fieldset de settings.
 
 == Parte Publica ==
     * *gelato_head*: se ejecuta antes de que comienze el `html`.
@@ -42,6 +47,7 @@
     * *gelato_notready*: se ejecuta cuando no se tiene conexion con la DB.
     * *gelato_noposts*: se ejecuta cuando no hay posts para mostrar.
     * *gelato_404*: se ejecuta cuando se detecta un error 404.
+    * *gelato_includes*: se ejecuta antes de asignar al theme los includes.
 
 == Posts ==
     * *post_created*:

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	{Gelato_includes}
+	{helper::html->includeRSS("feed/rss")}
+	{helper::html->includeCss("style")}
+	{helper::html->includeJsAbsolute("jquery")}
+	{helper::html->includeJsAbsolute("lightbox")}
+	{helper::html->includeCssAbsolute("lightbox")}
+	<title>{conf.title}</title>
+	<!--[if IE]>
+		<style type="text/css">
+			div.post div.quote span.quote big.quote {
+				line-height: 40px;
+			}
+		</style>
+	<![endif]-->
+</head>
+<body>
+	<div id="container">
+		{helper::html->imageLink("feed/rss","id=\"rss\" alt=\"RSS\" title=\"RSS\"","rss.gif")}
+		
+		<h1><a href="{URL_Tumble}/">{conf.title}</a></h1>
+
+			<div id="description">
+				{conf.description}
+			</div>
+
+		{if $isAuthenticated}
+			<div style="padding:4px; border:solid 2px #bbb; display:inline; background-color:#ddd; position:absolute; top:3px; right:3px;">
+				<b>Hi, {User}.</b>&nbsp;&nbsp;
+				<a target="_top" href="{URL_Tumble}/admin/index.php">{__('Add or Edit my posts')}</a>&nbsp;&nbsp;
+				<a target="_top" href="{URL_Tumble}/admin/close.php">{__('Sign out')}</a>
+			</div>
+		{/if}
+
+		{if $error}
+			<div class="error">{$error}</div>
+		{else}
+			{block $rows as $row}
+				<div class="date">
+					{$row.Date_Added}
+				</div>
+				<div class="post">
+					{helper::html->imageLink("post/{$row.id_post}","class=\"permalink\" alt=\"Permalink\"","link.gif")}
+				{if $row.postType=='post'}
+						<div class="regular">
+							<h2>{helper::html->linkTo("{$row.Title}","post/{$row.id_post}")}</h2>
+							{$row.Body}
+						</div>
+				{elseif $row.postType=='photo'}
+						<div class="photo">
+							{helper::html->imageLinkAbsolute("{$row.PhotoURL}?w=1024","rel=\"lightbox\"","{$row.PhotoURL}?w=500","{$row.PhotoAlt}")}<br />
+							<div class="caption">{$row.Caption}</div>
+						</div>
+				{elseif $row.postType=='quote'}
+						<div class="quote">
+							<span class="quote"><big class="quote">{helper::html->linkTo("&#147;","post/{$row.id_post}")}</big> {$row.Quote}</span>
+							<div class="source">&mdash; {$row.Source}</div>
+						</div>
+				{elseif $row.postType=='url'}
+						<div class="link">
+							&#187; <a href="{$row.URL}">{$row.Name}</a>
+							<div class="description">{$row.Description}</div>
+						</div>
+				{elseif $row.postType=='conversation'}
+						<div class="conversation">
+							...<h2>{helper::html->linkTo("{$row.Title}","post/{$row.id_post}")}</h2>
+							{$row.Conversation}
+						</div>
+				{elseif $row.postType=='video'}
+						<div class="video">
+							{$row.Video}
+							<div class="caption">{$row.Caption}</div>
+						</div>
+				{elseif $row.postType=='mp3'}
+						<div class="video">
+							{$row.Mp3}
+							<div class="caption">{$row.Caption}</div>
+						</div>
+				{/if}
+				</div>
+				{if !$id_post}
+					<div class="totalComments">
+						<h3>{__('Posted by')} {$row.User} {if $option.allow_comments}- {helper::html->linkTo("( {$row.Comments_Number} ) {__('comments')}","post/{$row.id_post}#comments")}{/if}</h3>
+					</div>
+				{/if}
+			{/block}
+
+			{if $id_post}
+				{if $row.Comments_Number>0}
+					<div class="containerComments">
+						<h3 id="comments">{$row.Comments_Number} {__('answers to')} &#8220;{$row.Post_Title}&#8221;</h3>
+						<ol class="commentlist">
+							{block $comments as $comment}
+							<li class="alt" id="comment-{$comment.Id_Comment}">
+								<cite>
+									<a href="#comment-{$comment.Id_Comment}" title="Comment permalink">#</a>&nbsp;&nbsp;
+									{$comment.Comment_Author} {__('said')}:
+								</cite>
+								<br />
+								<span class="timestampComment"> {__('at')} {$comment.Date}</span><br /><br />
+								{$comment.Comment}
+								<br /><br />
+							</li>
+							{/block}
+						</ol>
+					</div>
+				{/if}
+
+				{if $allowComments}
+					<div class="containerFormComments">
+						<h3 id="respond">{__('Add your comment')}</h3>
+
+						<form action="{Form_Action}" method="post" name="commentForm" id="commentForm">
+							<p>
+								<label for="username">
+									<small>{__('Name:')}</small>
+								</label>
+								<input name="username" id="username" value="{whois.User_Cookie}" size="22" tabindex="1" type="text" />
+							</p>
+							<p>
+								<label for="email">
+									<small>{__('E-mail:')}</small>
+								</label>
+								<input name="email" id="email" value="{whois.Email_Cookie}" size="22" tabindex="2" type="text" />
+							</p>
+							<p>
+								<label for="web">
+									<small>{__('Website:')}</small>
+								</label>
+								<input name="web" id="web" value="{whois.Web_Cookie}" size="22" tabindex="3" type="text" />
+							</p>
+							<p>
+								<textarea name="content" id="content" cols="100" rows="10" tabindex="4"></textarea>
+							</p>
+							<p>
+								<span style="color: rgb(136, 136, 136); margin-bottom: 10px; font-size: 10px;">
+									{__('Some HTML allowed:')}<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<code>
+										&lt;blockquote&gt; &lt;code&gt; &lt;em&gt; &lt;strong&gt; &lt;a&gt;
+									</code>
+								</span>
+							</p>
+							<p>
+								<input type="submit" value="Add comment" name="btnAdd" id="btnAdd" tabindex="5" />
+							</p>
+							<p>
+								<input name="id_post" id="id_post" value="{id_post}" type="hidden" />
+								<input name="comment_date" id="comment_date" value="{Date_Added}" type="hidden" />
+							</p>
+						</form>
+					</div>
+				{/if}
+			{else}
+				{pagination}
+			{/if}
+		{/if}
+	</div>
+	<div id="footer">
+		<a href="{URL_Tumble}/archive.php">{__('archive')}</a> &nbsp;/&nbsp;
+		{__('subscribe via')} <a href="{URL_Tumble}/rss.php">rss</a> &nbsp;/&nbsp;
+		{__('powered by')} <a href="http://www.gelatocms.com/">gelato cms</a>
+	</div>
+</body>
+</html>
